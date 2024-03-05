@@ -1,0 +1,15 @@
+<h2>ROLE CHANGE:</h2>
+<hr>
+<p class="ticket" id="userRole" hidden style="color: red; font-weight: bold;"></p>
+
+{{#if (eq session.user.role "user")}}
+<button  id="changeRole" data-user-id="{{session.user._id}}">Change to Premium</button>
+{{/if}}
+
+{{#if (eq session.user.role "premium")}}
+<button  id="changeRole" data-user-id="{{session.user._id}}">Change to User</button>
+{{/if}}
+
+
+
+<script src="/js/premiumUserScript.js"></script>
